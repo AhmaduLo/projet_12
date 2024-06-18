@@ -5,7 +5,7 @@ const BareNav = (props) => {
   return (
     <div className="BareNav">
       <div className="logo">
-        <img src="./sport-see-full-LOGO.png" alt="" />
+        <img src="../sport-see-full-LOGO.png" alt="" />
       </div>
       <div className="navige">
         <ul>

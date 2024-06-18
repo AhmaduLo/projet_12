@@ -1,10 +1,10 @@
 .containerInfo {
-  //border: 1px solid red;
-  width: 84%;
-  height: 80vh;
+  width: 85%;
+  height: 100vh;
   position: absolute;
-  transform: translate(18%, 5%);
-
+  transform: translate(12%, 4%);
+  overflow: hidden;
+  
   h1 span {
     color: #e60000;
   }
@@ -14,28 +14,25 @@
     grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-gap: 10px;
     align-items: center;
-    
+    display: flex;
+    justify-content: space-between;
 
-    .actifQuotidient {
-      border: 1px solid;
-      width: 97%;
-      height: 200px;
-      grid-row: 1 /3;
-      grid-column: 1/10;
+    .firstContenaire {
+      width: 80%;
+      height: 73vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
     }
-    .courbe {
-      border: 1px solid;
-      width: 97%;
-      height: 200px;
-      grid-row: 3/5;
-      grid-column: 1/10;
-    }
-    .calories {
-      border: 1px solid;
-      width: 60%;
-      height: 57vh;
-      grid-row: 1/5;
-      grid-column: 10/12;
+    .secondContenaire {
+      width: 20%;
+      height: 70vh;
+
+      .calories {
+        height: 100%;
+        margin-bottom: 25px;
+      }
     }
   }
 }

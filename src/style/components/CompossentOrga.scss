@@ -1,0 +1,35 @@
+.compossent-orga {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 5px;
+    height: 90px;
+  }
+
+  .item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .item div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .item span {
+    font-size: 0.8em;
+    color: #666;
+  }
+}
