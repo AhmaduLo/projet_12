@@ -5,27 +5,33 @@
   padding: 10px;
   color: #fff;
   font-family: Arial, sans-serif;
-}
 
-.chart-title {
+  .chart-title {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
     color: rgba(255, 255, 255, 0.8);
     width: 230%;
-}
+  }
 
-.custom-tooltip {
-  background-color: #fff;
-  padding: 5px;
-  border: 1px solid #ccc;
-  color: #000;
-}
+  .custom-tooltip {
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    color: #000;
+  }
 
-.courbeSessions .recharts-surface {
-  overflow: visible;
-}
+  .courbeSessions .recharts-surface {
+    overflow: visible;
+  }
 
-.courbeSessions .recharts-tooltip-wrapper {
-  outline: none;
+  .courbeSessions .recharts-tooltip-wrapper {
+    outline: none;
+  }
+  // @media (max-width: 1024px) {
+  //   .courbouLineChart .recharts-responsive-container {
+  //     background-color: blue;
+  //     width: 25%;
+  //   }
+  // }
 }

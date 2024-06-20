@@ -4,9 +4,14 @@ import CourbeSessions from "../components/CourbeSessions";
 import CompossentOrga from "./CompossentOrga";
 
 const InfoContainer = ({ user, activity, averageSessions, performance }) => {
-  const name = user.data.userInfos.firstName;
-  const keyData = user.data.keyData;
-  const score = user.data.todayScore || user.data.score;
+
+  const name = user.userInfos.firstName;
+  const keyData = user.keyData;
+  const score = user.todayScore || user.score;
+
+  if (!user || !user.userInfos) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="containerInfo">
       <h1>
@@ -20,7 +25,7 @@ const InfoContainer = ({ user, activity, averageSessions, performance }) => {
           </div>
           <div className="courbe">
             <CourbeSessions
-              sessions={averageSessions.data.sessions}
+              sessions={averageSessions.sessions}
               performance={performance}
               score={score}
             />

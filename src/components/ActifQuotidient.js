@@ -11,15 +11,18 @@ import {
 } from "recharts";
 
 const actifQuotidient = ({ activity }) => {
-  if (!activity || !activity.data || !activity.data.sessions) {
+  if (!activity) {
     return <div>Loading...</div>;
   }
-  const data = activity.data.sessions.map((session, index) => ({
+  // Transformation des données d'activité pour les rendre compatibles avec le graphique
+  const data = activity.sessions.map((session, index) => ({
     day: index + 1,
-    kilogram: session.kilogram,
-    calories: session.calories,
+    kilogram: session.kilogram, // Poids en kilogrammes
+    calories: session.calories, // Calories brûlées
   }));
+  // Composant personnalisé pour l'affichage des infobulles
   const CustomTooltip = ({ active, payload }) => {
+    // Vérifie si l'infobulle est active et contient des données
     if (active && payload && payload.length) {
       return (
         <div
@@ -62,7 +65,12 @@ const actifQuotidient = ({ activity }) => {
               domain={[0, "dataMax + 50"]}
             />
             <Tooltip content={<CustomTooltip />} />
-            <Legend verticalAlign="top" align="right" height={80} iconType="circle"/>
+            <Legend
+              verticalAlign="top"
+              align="right"
+              height={80}
+              iconType="circle"
+            />
             <Bar
               yAxisId="left"
               dataKey="kilogram"

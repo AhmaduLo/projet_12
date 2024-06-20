@@ -7,8 +7,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const courbouPERFORMANCE = ({ performance }) => {
-  if (!performance) {
+const CourbouPERFORMANCE = ({ performance }) => {
+  if (!performance || !performance.data || !performance.kind) {
     return <div>Loading...</div>;
   }
 
@@ -16,6 +16,7 @@ const courbouPERFORMANCE = ({ performance }) => {
     subject: performance.kind[item.kind],
     value: item.value,
   }));
+
   return (
     <div className="courbouPERFORMANCE2">
       <ResponsiveContainer width="100%" height={210}>
@@ -34,4 +35,5 @@ const courbouPERFORMANCE = ({ performance }) => {
     </div>
   );
 };
-export default courbouPERFORMANCE;
+
+export default CourbouPERFORMANCE;

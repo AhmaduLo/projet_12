@@ -39,8 +39,8 @@ const courbouLineChart = ({ sessions }) => {
 
   return (
     <div className="courbouLineChart">
-        <h2 className="chart-title">Durée moyenne des sessions</h2>
-      <ResponsiveContainer width="310%" height={150}>
+      <h2 className="chart-title">Durée moyenne des sessions</h2>
+      <ResponsiveContainer width="320%" height={150}>
         <LineChart
           data={data}
           margin={{ top: 20, right: 20, left: 20, bottom: 20 }}

@@ -1,7 +1,8 @@
-.courbeSessions {
-  height: auto;
+.courbeSessions1 {
+  //height: auto;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 
   .courbouLineChart {
     width: 30%;
@@ -16,4 +17,12 @@
     width: 30%;
     height: 100%;
   }
+  // @media (max-width: 1024px) {
+  //   border: 1px solid;
+  //   flex-direction: column;
+
+  //   .courbouLineChart {
+  //     width: 100%;
+  //   }
+  // }
 }

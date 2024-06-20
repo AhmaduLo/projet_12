@@ -2,12 +2,11 @@
   background-color: rgba(153, 153, 153, 0.11);
   border-radius: 10px;
   //height: 250px;
-  
-  .chart-title{
+
+  .chart-title {
     color: black;
     margin-left: 13px;
     margin-bottom: -39px;
-
   }
   .annonce_courbe {
     display: flex;
@@ -25,5 +24,9 @@
       justify-content: space-between;
     }
   }
-  
+
+  // @media (max-width: 1024px) {
+  //   border: 1px solid;
+  //   width: 95%;
+  // }
 }

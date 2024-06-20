@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Mon Projet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Ce projet est une application web qui permet aux utilisateurs de consulter leurs informations de profil, incluant l'activité quotidienne, les sessions moyennes, les performances et les objectifs. Le projet utilise React pour le front-end et Node.js pour le back-end.
 
-## Available Scripts
+## Prérequis
+Avant de commencer, assurez-vous d'avoir installé les éléments suivants sur votre machine :
+- [Node.js](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+### Cloner le dépôt
+```bash
+git clone https://github.com/votre-utilisateur/votre-repo.git
+cd votre-repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##Installer les dépendances
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Pour le front-end
+cd mon-projet
+npm install
+# ou
+yarn install
 
-### `npm test`
+# Pour le back-end
+cd ../P9-front-end-dashboard
+npm install
+# ou
+yarn install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##Lancer le front-end
+live-server
 
-### `npm run build`
+##Lancer le back-end
+npm start
+# ou
+yarn start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Mock des données
+Pour faciliter le développement, des données mock sont utilisées. Elles sont définies dans le fichier mockData.js 
+const USER_MAIN_DATA = [
+  {
+    id: 12,
+    userInfos: {
+      firstName: "Karl",
+      lastName: "Dovineau",
+      age: 31,
+    },
+    todayScore: 0.12,
+    keyData: {
+      calorieCount: 1930,
+      proteinCount: 155,
+      carbohydrateCount: 290,
+      lipidCount: 50,
+    },
+  },
+  // Autres utilisateurs...
+];
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##Structure du projet
+Le projet est organisé comme suit :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+css
+Copier le code
+mon-projet/
+│
+├── src/
+│   ├── components/
+│   │   ├── ActifQuotidient.js
+│   │   ├── CourbeSessions.js
+│   │   ├── CompossentOrga.js
+│   │   └── ...
+│   │
+│   ├── pages/
+│   │   ├── Accueil.js
+│   │   ├── Profil.js
+│   │   ├── Reglage.js
+│   │   └── ...
+│   │
+│   ├── styles/
+│   │   ├── App.scss
+│   │   └── ...
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+│
+├── public/
+│   ├── iconeUser/
+│   │   ├── calories-icon.png
+│   │   ├── carbs-icon.png
+│   │   ├── fat-icon.png
+│   │   ├── protein-icon.png
+│   │   └── ...
+│   └── ...
+│
+├── package.json
+└── README.md
 
-### `npm run eject`
+Licence
+### Conclusion
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+En suivant cette structure, vous pouvez créer un fichier README détaillé et informatif qui aidera les autres développeurs à comprendre votre projet, à l'installer, à l'utiliser et à contribuer. N'hésitez pas à ajuster le contenu pour refléter fidèlement votre projet et ses spécificités.
