@@ -13,11 +13,13 @@ const courbouLineChart = ({ sessions }) => {
   if (!sessions) {
     return <div>Loading...</div>;
   }
+  // Transformation de l'index en jour de la semaine
   const data = sessions.map((session, index) => ({
     day: ["L", "M", "M", "J", "V", "S", "D"][index],
     sessionLength: session.sessionLength,
   }));
 
+  // Définition d'un tooltip personnalisé pour afficher les données au survol
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -33,7 +35,6 @@ const courbouLineChart = ({ sessions }) => {
         </div>
       );
     }
-
     return null;
   };
 
@@ -42,8 +43,8 @@ const courbouLineChart = ({ sessions }) => {
       <h2 className="chart-title">Durée moyenne des sessions</h2>
       <ResponsiveContainer width="320%" height={150}>
         <LineChart
-          data={data}
-          margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+          data={data} // Données pour le graphique
+          margin={{ top: 20, right: 20, left: 20, bottom: 20 }}// Marges autour du graphique
         >
           <CartesianGrid
             strokeDasharray="3 3"
