@@ -12,7 +12,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Navigate to="/accueil/12" />} />
         <Route path="Accueil/:id" element={<Accueil />} />
-        <Route path="/profil/:id" element={<Profil />} />
+        <Route path="/profil" element={<Profil />} />
         <Route path="/Reglage" element={<Reglage />} />
         <Route path="/Communaute" element={<Communaute />} />
         {/* path"*" fonctionne si jamais l'url ne correspond a rien  */}

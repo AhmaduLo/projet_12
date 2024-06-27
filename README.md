@@ -98,7 +98,4 @@ mon-projet/
 ├── package.json
 └── README.md
 
-Licence
-### Conclusion
 
-En suivant cette structure, vous pouvez créer un fichier README détaillé et informatif qui aidera les autres développeurs à comprendre votre projet, à l'installer, à l'utiliser et à contribuer. N'hésitez pas à ajuster le contenu pour refléter fidèlement votre projet et ses spécificités.
