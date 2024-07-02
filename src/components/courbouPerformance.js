@@ -16,7 +16,6 @@ const CourbouPERFORMANCE = ({ performance }) => {
     subject: performance.kind[item.kind],
     value: item.value,
   }));
-
   return (
     <div className="courbouPERFORMANCE2">
       <ResponsiveContainer width="100%" height={210}>

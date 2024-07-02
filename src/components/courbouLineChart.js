@@ -44,7 +44,7 @@ const courbouLineChart = ({ sessions }) => {
       <ResponsiveContainer width="320%" height={150}>
         <LineChart
           data={data} // Données pour le graphique
-          margin={{ top: 20, right: 20, left: 20, bottom: 20 }}// Marges autour du graphique
+          margin={{ top: 20, right: 20, left: 20, bottom: 10 }} // Marges autour du graphique
         >
           <CartesianGrid
             strokeDasharray="3 3"
