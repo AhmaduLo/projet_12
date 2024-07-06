@@ -32,8 +32,8 @@ const actifQuotidient = ({ activity }) => {
             padding: "5px",
             border: "1px solid #cccccc",
             color: "white",
-            width:"35px",
-            fontSize:"12px"
+            width: "40px",
+            fontSize: "12px",
           }}
         >
           <p>{`${payload[0].value}kg`}</p>
@@ -44,6 +44,10 @@ const actifQuotidient = ({ activity }) => {
 
     return null;
   };
+  // Composant personnalisé pour la légende
+  const renderColorfulLegendText = (value, entry) => {
+    return <span style={{ color: "#00000096" }}>{value}</span>;
+  };
   return (
     <div className="actifQuotidient2">
       <div className="graph">
@@ -53,13 +57,17 @@ const actifQuotidient = ({ activity }) => {
             data={data}
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
           >
-            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false}/>
+            <CartesianGrid
+              strokeDasharray="1 2"
+              horizontal={true}
+              vertical={false}
+            />
             <XAxis dataKey="day" tickLine={false} axisLine={false} />
             <YAxis
               yAxisId="right"
               orientation="right"
               domain={[69, 71]}
-              tick={{ fontSize: 15, fill: '#949494' }}
+              tick={{ fontSize: 15, fill: "#949494" }}
               axisLine={false}
               tickLine={false}
             />
@@ -76,7 +84,9 @@ const actifQuotidient = ({ activity }) => {
               align="right"
               height={80}
               iconType="circle"
-              wrapperStyle={{ fontSize: '12px' }}
+              iconSize={10} 
+              wrapperStyle={{ fontSize: "12px" }}
+              formatter={renderColorfulLegendText}
             />
             <Bar
               yAxisId="right"
