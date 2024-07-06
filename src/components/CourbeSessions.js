@@ -17,7 +17,7 @@ const courbeSessions = ({ sessions, performance, score}) => {
         <Objectif  score={score}/>
       </div>
     </div>
-  );
+  ); 
 };
 
 export default courbeSessions;

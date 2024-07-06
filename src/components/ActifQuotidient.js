@@ -28,9 +28,12 @@ const actifQuotidient = ({ activity }) => {
         <div
           className="custom-tooltip"
           style={{
-            backgroundColor: "#fff",
+            backgroundColor: "#fd0000",
             padding: "5px",
-            border: "1px solid #ccc",
+            border: "1px solid #cccccc",
+            color: "white",
+            width:"35px",
+            fontSize:"12px"
           }}
         >
           <p>{`${payload[0].value}kg`}</p>
@@ -50,18 +53,21 @@ const actifQuotidient = ({ activity }) => {
             data={data}
             margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
           >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="day" />
-            <YAxis
-              yAxisId="left"
-              orientation="left"
-              stroke="#8884d8"
-              domain={[69, 81]}
-            />
+            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false}/>
+            <XAxis dataKey="day" tickLine={false} axisLine={false} />
             <YAxis
               yAxisId="right"
               orientation="right"
+              domain={[69, 71]}
+              tick={{ fontSize: 15, fill: '#949494' }}
+              axisLine={false}
+              tickLine={false}
+            />
+            <YAxis
+              yAxisId="left"
+              orientation="left"
               stroke="#ff0000"
+              hide={true} // Cache l'axe Y pour les calories
               domain={[0, "dataMax + 50"]}
             />
             <Tooltip content={<CustomTooltip />} />
@@ -70,9 +76,10 @@ const actifQuotidient = ({ activity }) => {
               align="right"
               height={80}
               iconType="circle"
+              wrapperStyle={{ fontSize: '12px' }}
             />
             <Bar
-              yAxisId="left"
+              yAxisId="right"
               dataKey="kilogram"
               name="Poids (kg)"
               fill="#000000"
@@ -80,7 +87,7 @@ const actifQuotidient = ({ activity }) => {
               radius={[10, 10, 0, 0]}
             />
             <Bar
-              yAxisId="right"
+              yAxisId="left"
               dataKey="calories"
               name="Calories brûlées (KCal)"
               fill="#ff0000"

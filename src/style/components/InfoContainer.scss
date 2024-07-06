@@ -4,30 +4,28 @@
   position: absolute;
   transform: translate(12%, 4%);
   //overflow: hidden;
-  
+
   h1 span {
     color: #e60000;
   }
 
   .containerGraph {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
     grid-gap: 10px;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    //overflow: hidden;
 
     .firstContenaire {
       width: 80%;
-      height: 73vh;
+      height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
     }
     .secondContenaire {
       width: 20%;
-      height: 70vh;
+      height: 76vh;
 
       .calories {
         height: 100%;
@@ -35,6 +33,4 @@
       }
     }
   }
-
 }
-
