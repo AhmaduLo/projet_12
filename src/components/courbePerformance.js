@@ -9,7 +9,7 @@ import {
 
 const CourbePERFORMANCE = ({ performance }) => {
   if (!performance || !performance.data || !performance.kind) {
-    return <div>Loading...</div>;
+    return <div>Impossible de récupérer les données utilisateur. Veuillez réessayer plus tard</div>;
   }
 
    // Traduction des labels en français

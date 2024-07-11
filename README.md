@@ -61,6 +61,10 @@ const USER_MAIN_DATA = [
 ##Structure du projet
 Le projet est organisé comme suit :
 
+# pour passer de l'API au donnee mock 
+Pour passer aux données mock faut le mettre a true il est dans ./page/Accueil.js
+process.env.REACT_APP_USE_MOCK_DATA === "false"
+
 css
 Copier le code
 mon-projet/

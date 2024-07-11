@@ -12,7 +12,7 @@ import {
 
 const actifQuotidient = ({ activity }) => {
   if (!activity) {
-    return <div>Loading...</div>;
+    return <div>Impossible de récupérer les données utilisateur. Veuillez réessayer plus tard</div>;
   }
   // Transformation des données d'activité pour les rendre compatibles avec le graphique
   const data = activity.sessions.map((session, index) => ({
