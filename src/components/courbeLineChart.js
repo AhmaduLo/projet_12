@@ -13,7 +13,7 @@ const CourbouLineChart = ({ sessions }) => {
   const [hoveredPosition, setHoveredPosition] = useState(null);
 
   if (!sessions) {
-    return <div>Loading...</div>;
+    return <div>Impossible de récupérer les données utilisateur. Veuillez réessayer plus tard</div>;
   }
 
   // Transformation de l'index en jour de la semaine

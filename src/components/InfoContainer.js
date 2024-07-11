@@ -10,7 +10,7 @@ const InfoContainer = ({ user, activity, averageSessions, performance }) => {
   const score = user.todayScore || user.score;
 
   if (!user || !user.userInfos) {
-    return <div>Loading...</div>;
+    return <div>Impossible de récupérer les données utilisateur. Veuillez réessayer plus tard</div>;
   }
   return (
     <div className="containerInfo">

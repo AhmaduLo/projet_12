@@ -75,7 +75,7 @@ const Accueil = () => {
     fetchData();
   }, [id]); // Dépendance sur l'ID, la fonction sera réexécutée si l'ID change
   if (!user || !activity || !averageSessions || !performance) {
-    return <div>Loading...</div>;
+    return <div>Impossible de récupérer les données utilisateur. Veuillez réessayer plus tard</div>;
   }
 
   return (
