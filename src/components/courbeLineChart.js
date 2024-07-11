@@ -9,7 +9,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const CourbouLineChart = ({ sessions }) => {
+const CourbeLineChart = ({ sessions }) => {
   const [hoveredPosition, setHoveredPosition] = useState(null);
 
   if (!sessions) {
@@ -114,4 +114,4 @@ const CourbouLineChart = ({ sessions }) => {
   );
 };
 
-export default CourbouLineChart;
+export default CourbeLineChart;

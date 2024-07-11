@@ -7,7 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const CourbouPERFORMANCE = ({ performance }) => {
+const CourbePERFORMANCE = ({ performance }) => {
   if (!performance || !performance.data || !performance.kind) {
     return <div>Loading...</div>;
   }
@@ -45,4 +45,4 @@ const CourbouPERFORMANCE = ({ performance }) => {
   );
 };
 
-export default CourbouPERFORMANCE;
+export default CourbePERFORMANCE;
