@@ -1,6 +1,6 @@
 import React from "react";
-import CourbouLineChart from "./courbouLineChart";
-import CourbouPERFORMANCE from "./courbouPerformance";
+import CourbouLineChart from "./courbeLineChart";
+import CourbouPERFORMANCE from "./courbePerformance";
 import Objectif from "./objectif";
 
 const courbeSessions = ({ sessions, performance, score}) => {
