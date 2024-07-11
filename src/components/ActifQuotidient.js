@@ -66,7 +66,7 @@ const actifQuotidient = ({ activity }) => {
             <YAxis
               yAxisId="right"
               orientation="right"
-              domain={[69, 71]}
+              domain={[0, "dataMax + 1"]}
               tick={{ fontSize: 15, fill: "#949494" }}
               axisLine={false}
               tickLine={false}
