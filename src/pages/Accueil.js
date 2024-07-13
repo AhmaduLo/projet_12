@@ -24,6 +24,7 @@ const Accueil = () => {
     // Fonction asynchrone pour récupérer les données
     const fetchData = async () => {
       try {
+        //pour switch API/Mock il faut le mettre a "true"
         if (process.env.REACT_APP_USE_MOCK_DATA === "false") {
           // Utilisez les données mock
           const userData = USER_MAIN_DATA.find((user) => user.id === userId);
