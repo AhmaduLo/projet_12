@@ -8,7 +8,7 @@ const objectif = ({ score }) => {
     { name: "Remaining", value: 1 - score }, // Partie restante pour atteindre l'objectif
   ];
   // Les couleurs utilisées pour chaque partie du graphique
-  const COLORS = ["#FF0000", "#ebeaea26"];
+  const COLORS = ["#FF0000", "#ffffff1d"];
 
   return (
     <div
@@ -29,6 +29,16 @@ const objectif = ({ score }) => {
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie
+              data={[{ name: "Background", value: 1 }]}
+              dataKey="value"
+              startAngle={0}
+              endAngle={360}
+              innerRadius="0%"
+              outerRadius="80%"
+              fill="#ffffff"
+              stroke="none" // Remove the stroke (border)
+            />
+            <Pie
               data={data} // Données pour le camembert
               startAngle={180} // Angle de départ du camembert (demi-cercle)
               endAngle={-280} // Angle de fin du camembert
@@ -36,6 +46,7 @@ const objectif = ({ score }) => {
               outerRadius="90%" // Rayon extérieur du camembert
               dataKey="value" // Clé des données utilisée pour déterminer les valeurs
               cornerRadius={10} // Rayon des coins des cellules
+              stroke="none" // Remove the stroke (border)
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index]} />
